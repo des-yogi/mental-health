@@ -1,1 +1,1 @@
-# mental-health
+# Mental Health Academy
