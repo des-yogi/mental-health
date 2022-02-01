@@ -1,0 +1,16 @@
+.burger {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  background-image: svg-load('../blocks/sprite-svg/svg/menu.svg', fill=$white);
+
+  @media (min-width: $menu-desktop-width) {
+    display: none !important;
+  }
+
+  &--close {
+  }
+}

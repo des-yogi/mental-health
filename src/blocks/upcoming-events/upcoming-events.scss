@@ -1,0 +1,131 @@
+.upcoming-events {
+  color: $white;
+  background-color: $secondary-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .tab-content > .tab-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__col-nav,
+  &__col-content {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+  }
+
+  &__nav {
+    padding-top: 48px;
+    padding-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 72px;
+      padding-bottom: 64px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba($white, 0.2);
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 32px;
+    }
+  }
+
+  &__nav-tabs {
+
+  }
+
+  &__nav-item {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.2;
+    color: rgba($white, 0.65);
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: rgba($white, 1);
+      border-color: $main-color;
+
+      &::after {
+        border-color: $main-color;
+      }
+    }
+
+    &.active {
+      pointer-events: none;
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 16px 32px;
+      border-radius: $border-radius-xl;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -7px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background-color: $secondary-color;
+      border-radius: 50%;
+      border: 2px solid rgba($white, 0.65);
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  &__caption {
+    margin: 0;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  &__tab-content {
+
+  }
+
+  &__tab-pane {
+
+  }
+}

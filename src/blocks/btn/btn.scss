@@ -1,0 +1,127 @@
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: $field-padding-vertical  52px $field-padding-vertical 24px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  color: $white;
+  border-radius: $border-radius;
+  border: 1px solid $main-color;
+  background-color: $main-color;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px;
+  background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$white);
+  user-select: none;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  & > span {
+    display: block;
+    padding-right: 24px;
+    border-right: 1px solid rgba($white, 0.25);
+    transition: all $transition-time;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+    background-color: $link-color--hover;
+    border-color: $link-color--hover;
+    box-shadow: $shadow-color;
+  }
+
+  &:active,
+  &:focus {
+    // @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    // opacity: $opacity;
+    cursor: not-allowed;
+    color: $text-muted;
+    background-color: $light-bg;
+    border-color: $light-bg;
+    background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$text-muted);
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+
+    & > span {
+      border-right-color: $border-color;
+    }
+  }
+
+  &--ondark {
+    background-color: rgba($white, 0);
+    border-color: rgba($white, 0.25);
+
+    & > span {
+      border-right: 1px solid rgba($white, 0.25);
+      transition: all $transition-time;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($white, 0.25);
+      border-color: rgba($white, 1);
+
+      & > span {
+        border-right-color: rgba($white, 1);
+      }
+    }
+
+    &--disabled,
+    &:disabled {
+      cursor: not-allowed;
+      color: $link-color--hover;
+      background-color: rgba($white, 0.4);
+      border-color: rgba($white, 0);
+      background-image: svg-load('../blocks/btn/bg-img/arrow-right.svg', fill=$link-color--hover);
+
+      & > span {
+        border-right-color: rgba($white, 0.25);
+      }
+
+      @at-root a.btn--ondark--disabled {
+        pointer-events: none;
+      }
+    }
+  }
+
+
+
+  // &--main {
+  //   color: #fff;
+  //   background-color: $color-main;
+  //   border: 1px solid $color-main;
+
+  //   &:hover,
+  //   &:focus {
+  //     color: #fff;
+  //     background-color: darken($color-main, 10%);
+  //     border-color: darken($color-main, 12%);
+  //   }
+
+  //   &--disabled,
+  //   &:disabled {
+  //     color: #fff;
+  //     background-color: $color-main;
+  //     border-color: $color-main;
+  //   }
+  // }
+}
