@@ -37,7 +37,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: inherit;
+    color: $white;
     background-color: $link-color--hover;
     border-color: $link-color--hover;
     box-shadow: $shadow-color;
@@ -66,7 +66,7 @@
     }
   }
 
-  &--ondark {
+  &--main {
     background-color: rgba($white, 0);
     border-color: rgba($white, 0.25);
 

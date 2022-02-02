@@ -1,14 +1,57 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/projects-index/projects-index.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="projects-index">content</div>
-
 -->
+
+<article class="container  projects-index">
+  <h2 class="projects-index__title">Проекты Наталии Семитоцкой</h2>
+
+  <div class="list-nostyled  row  projects-index__row" role="list">
+
+    <div class="projects-index__col" role="listitem">
+      <a href="#" class="project-card">
+        <div class="embed-responsive embed-responsive--1-1  project-card__img">
+          <picture>
+            <source srcset="img/project1-pict.webp" type="image/webp">
+            <img src="img/project1-pict.png" width="96" height="96" alt="HR Land" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="project-card__text">
+          <h3 class="h4  project-card__title">HR land 1</h3>
+          <p>Международное сообщество HR менеджеров, HR директоров</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="projects-index__col" role="listitem">
+      <a href="#" class="project-card">
+        <div class="embed-responsive embed-responsive--1-1  project-card__img">
+          <picture>
+            <source srcset="img/project2-pict.webp" type="image/webp">
+            <img src="img/project2-pict.png" width="96" height="96" alt="HR Land" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="project-card__text">
+          <h3 class="h4  project-card__title">HR land 2</h3>
+          <p>Индекс счастья – это сообщество активных женщин, желающих зажечь свою жизнь на пути к женственности, гармоничности, счастью и любви</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="projects-index__col" role="listitem">
+      <a href="#" class="project-card">
+        <div class="embed-responsive embed-responsive--1-1  project-card__img">
+          <picture>
+            <source srcset="img/project3-pict.webp" type="image/webp">
+            <img src="img/project3-pict.png" width="96" height="96" alt="HR Land" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="project-card__text">
+          <h3 class="h4  project-card__title">HR land 3</h3>
+          <p>Международное сообщество HR менеджеров, HR директоров</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</article>

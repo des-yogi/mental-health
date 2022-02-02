@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   flex: 0 0 auto;
-  display: block;
+  display: inline-flex;
   margin-right: 24px;
 
   @media (min-width: $screen-md) {
@@ -27,5 +27,15 @@
     }
   }
 
-  &--footer {}
+  &--footer {
+
+    svg {
+      width: 110px;
+      height: 92px;
+
+      .icon {
+        fill: $main-color;
+      }
+    }
+  }
 }

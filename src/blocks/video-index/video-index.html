@@ -1,14 +1,15 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/video-index/video-index.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="video-index">content</div>
-
 -->
+
+<section class="container  video-index">
+  <h2 class="video-index__title">Видео</h2>
+  <div class="row">
+    <div class="video-index__col">
+      @@include('../../blocks/video/video.html')
+    </div>
+    <div class="video-index__col">
+      @@include('../../blocks/video/video.html')
+    </div>
+  </div>
+</section>

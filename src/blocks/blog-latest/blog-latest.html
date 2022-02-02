@@ -1,14 +1,42 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/blog-latest/blog-latest.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="blog-latest">content</div>
-
 -->
+
+<section class="container  blog-latest">
+  <h2 class="blog-latest__title">Последнее из блога</h2>
+
+  <div class="row" role="list">
+
+    <div class="blog-latest__col" role="listitem">
+      @@include('../../blocks/blog-latest-card/blog-latest-card.html', {
+        "img": "blog1",
+        "title": "5 апреля - Мастерская коучинга Наталии Романенко. №2-2016 'Как общаться с трудными людьми. Драйверы и адаптации'",
+        "text": "5 апреля 2016г. мы вновь открываем двери своей коучинговой мастерской для практикующих коучей"
+      })
+    </div>
+
+    <div class="blog-latest__col" role="listitem">
+      @@include('../../blocks/blog-latest-card/blog-latest-card.html', {
+        "img": "blog2",
+        "title": "6 апреля пройдет бесплатный вебинар Наталии Романенко",
+        "text": "В ходе вебинара рассмотрим такие вопросы: Страхи, неудачи, внутреннее сопротивление"
+      })
+    </div>
+
+    <div class="blog-latest__col" role="listitem">
+      @@include('../../blocks/blog-latest-card/blog-latest-card.html', {
+        "img": "blog3",
+        "title": "19 марта 2016 наш клуб снова откроет двери для своих участников (74 встреча клуба менеджеров HR-LAND)",
+        "text": "Время проведения: 11:00-15:0019 марта 2016 года наша очередная встреча в сообществе менеджеров"
+      })
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="blog-latest__col-btn">
+      <a href="blogs.html" class="btn"><span>Перейти в блог</span></a>
+    </div>
+  </div>
+
+</section>

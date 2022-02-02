@@ -1,9 +1,40 @@
-// В этом файле должны быть стили для БЭМ-блока project-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .project-card {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  background-color: $light-bg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+
+  @media (min-width: $screen-xl) {
+    padding: 32px;
+    border-radius: $border-radius-xl;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    p {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
 }
