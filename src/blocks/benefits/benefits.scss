@@ -1,9 +1,58 @@
-// В этом файле должны быть стили для БЭМ-блока benefits, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .benefits {
+  padding-top: 32px;
+  padding-bottom: calc(32px - 24px);
+  background-color: $light-bg;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $screen-md) {
+    padding-top: 64px;
+    padding-bottom: calc(64px - 32px);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    text-align: center;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-wrapper {
+    flex: 0 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+    background-color: $white;
+    border: 1px solid rgba(55, 179, 175, 0.15);
+    border-radius: $border-radius;
+
+    img {
+      width: 48px;
+      height: 48px;
+      //box-shadow: 0px 0px 32px -5px rgba(55, 179, 175, 0.3);
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    font-weight: 500;
+  }
 }

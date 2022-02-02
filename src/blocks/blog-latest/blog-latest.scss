@@ -1,9 +1,34 @@
-// В этом файле должны быть стили для БЭМ-блока blog-latest, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .blog-latest {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    text-align: center;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 32px;
+  }
+
+  &__col-btn {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 3);
+    @include col(md, 6);
+    @include col-offset(xl, 4);
+    @include col(xl, 4);
+
+    .btn {
+      width: 100%;
+    }
+  }
 }

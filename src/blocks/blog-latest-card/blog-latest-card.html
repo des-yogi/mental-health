@@ -1,14 +1,26 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/blog-latest-card/blog-latest-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="blog-latest-card">content</div>
-
 -->
+
+<a href="#" class="blog-latest-card">
+  <div class="embed-responsive embed-responsive--4-3  blog-latest-card__img">
+    <picture>
+      <source data-srcset="img/@@img-img.webp" media="(min-width: 1200px)" type="image/webp">
+      <source data-srcset="img/@@img-img.jpg" media="(min-width: 1200px)">
+        <!-- 358x268 (1200 -> ) -->
+      <source data-srcset="img/@@img-img.webp" media="(min-width: 768px)" type="image/webp">
+      <source data-srcset="img/@@img-img.jpg" media="(min-width: 768px)">
+        <!-- 552x414 (768 -> 1200) -->
+      <source data-srcset="img/@@img-img.webp" media="(min-width: 480px)" type="image/webp">
+      <source data-srcset="img/@@img-img.jpg" media="(min-width: 480px)">
+        <!-- 735x551 (480 -> 768) -->
+      <source data-srcset="img/@@img-img.webp" type="image/webp">
+      <img data-src="img/@@img-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" width="450" height="337" alt="Заголовок">
+    </picture>
+  </div>
+  <div class="blog-latest-card__text">
+    <span class="publishedon"><time datetime="2022-01-12">12.01.2022</time></span>
+    <h3 class="h4  blog-latest-card__title">@@title</h3>
+    <p class="blog-latest-card__descr">@@text</p>
+  </div>
+</a>

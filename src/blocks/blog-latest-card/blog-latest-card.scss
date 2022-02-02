@@ -1,9 +1,31 @@
-// В этом файле должны быть стили для БЭМ-блока blog-latest-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .blog-latest-card {
+  display: block;
+  text-decoration: none;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img {
+    margin-bottom: 24px;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow;
+
+    @media (min-width: $screen-xl) {
+      border-radius: $border-radius-xl;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  &__descr {
+    margin-top: 0;
+    color: $text-color;
+  }
 }

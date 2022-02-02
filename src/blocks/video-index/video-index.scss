@@ -1,9 +1,28 @@
-// В этом файле должны быть стили для БЭМ-блока video-index, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .video-index {
+  padding-top: 72px;
+  padding-bottom: calc(72px - 24px); //-margin-bottom
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 6);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
 }

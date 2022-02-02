@@ -1,8 +1,101 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  padding-top: 48px;
+  color: $white;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  a {
+    display: inline-flex;
+    text-decoration: none;
+  }
+
+  &__col-logo {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 3);
+    @include col(xl, 2);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col-nav {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 9);
+    @include col(xl, 6);
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 56px;
+    }
+  }
+
+  &__col-contacts {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 3);
+    @include col(md, 9);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 56px;
+    }
+  }
+
+  &__contacts-mail {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8);
+    @include col(xl, 12);
+    margin-bottom: 16px;
+  }
+
+  &__contacts-social {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4);
+    @include col(xl, 12);
+  }
+
+  &__contacts-link {
+    position: relative;
+    padding-left: 36px;
+    font-size: 15px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left center;
+    background-image: svg-load('../blocks/sprite-svg/svg/sms.svg', fill=$main-color);
+  }
+
+  &__nav-list {
+    @include row(
+      $xs-grid-gutter:  16px,
+      $sm-grid-gutter:  16px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+  }
+
+  &__nav-item {
+    @include col(xs, 6, $grid-columns, 16px);
+    @include col(md, 4);
+    margin-bottom: 16px;
+  }
+
+  &__nav-link {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+  }
 }

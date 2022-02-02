@@ -12,13 +12,50 @@
     }
   }
 
-  &__col-nav,
-  &__col-content {
-    @include col(xs, 12, $grid-columns, 16px);
+  .btn {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__row {
+    @include row(
+      $xs-grid-gutter:  32px,
+      $sm-grid-gutter:  32px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+  }
+
+  &__col-nav {
+    @include col(xs, 12, $grid-columns, 32px);
     @include col-offset(md, 1);
     @include col(md, 10);
     @include col-offset(xl, 0);
     @include col(xl, 6);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 64px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col-content {
+    @include col(xs, 12, $grid-columns, 32px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 1);
+    @include col(xl, 5);
+    background-color: rgba($white, 0.05);
+
+    @media (min-width: $screen-md) {
+      background: none;
+    }
   }
 
   &__nav {
@@ -43,10 +80,6 @@
     @media (min-width: $screen-md) {
       padding-bottom: 32px;
     }
-  }
-
-  &__nav-tabs {
-
   }
 
   &__nav-item {
@@ -110,6 +143,19 @@
     }
   }
 
+  &__tab-content {
+    padding-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 32px;
+      background-color: rgba($white, 0.05);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 64px;
+    }
+  }
+
   &__date {
     font-size: 14px;
     margin-bottom: 8px;
@@ -121,11 +167,62 @@
     line-height: inherit;
   }
 
-  &__tab-content {
+  &__img {
+    max-width: 358px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 $border-radius-lg $border-radius-lg;
+    filter: drop-shadow(0 0 32px rgba(0, 0, 0, 0.24));
 
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: 0;
+      border-radius: 0 0 $border-radius-xl 0;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
-  &__tab-pane {
+  &__text {
 
+    @media (min-width: $screen-md) {
+      padding: 0 11%;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 0 32px;
+    }
+
+    div + div {
+      margin-top: 16px;
+    }
+  }
+
+  &__descr {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: inherit;
+
+    & + & {
+      margin-top: 2px;
+    }
+
+    &--title {
+      color: $main-color;
+    }
+
+    &--list {
+      margin-top: 0;
+      font-weight: 400;
+    }
   }
 }

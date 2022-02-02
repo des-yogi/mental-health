@@ -1,12 +1,21 @@
 .video {
-  background-color: $secondary-color;
+  background-color: $border-color;
+  border-radius: $border-radius-xl;
+  border: 1px solid $border-color;
 
   $block-name:                &; // #{$block-name}__element
 
   &:hover,
   &:focus {
 
-    #{$block-name}__button {}
+    #{$block-name}__button {
+
+      svg {
+        .fill {
+          fill: $color-danger;
+        }
+      }
+    }
   }
 
   &__link,
@@ -21,16 +30,27 @@
   &__button {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    left: 0;
     z-index: 1;
     padding: 0;
-    width: 68px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    svg {
+
+      .fill {
+        fill: $main-color;
+        transition: fill $transition-time;
+      }
+
+      .icon {
+        fill: $white;
+      }
+    }
   }
 
   // enabled
