@@ -11,6 +11,10 @@
     margin-top: auto;
   }
 
+  @media (min-width: $screen-xl) {
+    margin-right: 160px;
+  }
+
   img {
     display: block;
     width: 50px;

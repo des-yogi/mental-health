@@ -32,16 +32,6 @@
 
   &__footer-wrapper {
     flex-shrink: 0;
-    background-color: $secondary-color;
-
-    @media (min-width: $screen-xxl) {
-      background-repeat: no-repeat no-repeat;
-      background-position: left bottom, right top;
-      background-size: 175px 211px;
-      background-image:
-      url(../img/footer-bottom-left.png),
-      url(/img/footer-top-right.png);
-    }
   }
 }
 
@@ -355,4 +345,20 @@ a {
   font-size: $font-size-sm;
   font-weight: 400;
   color: $text-color;
+}
+
+.badge {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 4px 12px;
+  margin-right: 8px;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  color: $white;
+  background-color: $main-color;
+  border-radius: $border-radius-xs;
+}
+
+.badge + .badge {
+  margin-top: 12px;
 }

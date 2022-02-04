@@ -1,0 +1,80 @@
+.training-card {
+  margin-bottom: 32px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  // & + & {
+  //   padding-top: 32px;
+  //   margin-top: 32px;
+  //   border-top: 1px solid $border-color;
+
+  //   @media (min-width: $screen-md) {
+  //     padding-top: 48px;
+  //     margin-top: 48px;
+  //   }
+  // }
+
+  &__img {
+    max-width: 460px;
+    margin-right: auto;
+    margin-bottom: 16px;
+    background-color: $light-bg;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 356px;
+      margin-bottom: 0;
+      margin-right: 32px;
+      border-radius: $border-radius-xl;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      flex: 1 1 auto;
+      padding: 16px 0 0;
+    }
+  }
+
+  &__type {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: initial;
+  }
+
+  &__title {
+    margin: 12px 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 12px;
+    font-size: $font-size-sm;
+    color: initial;
+  }
+
+  &__footer {
+
+  }
+}

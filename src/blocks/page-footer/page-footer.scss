@@ -1,9 +1,19 @@
 .page-footer {
   padding-top: 48px;
   color: $white;
+  background-color: $secondary-color;
 
   @media (min-width: $screen-xl) {
     padding-top: 64px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    background-repeat: no-repeat no-repeat;
+    background-position: left bottom, right top;
+    background-size: 175px 211px;
+    background-image:
+    url(../img/footer-bottom-left.png),
+    url(../img/footer-top-right.png);
   }
 
   $block-name:                &; // #{$block-name}__element

@@ -1,0 +1,77 @@
+.blog-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  & + & {
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding-top: 48px;
+      margin-top: 48px;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 48px;
+    padding-bottom: 72px;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+      padding-bottom: 96px;
+    }
+  }
+
+  .row {
+    align-items: flex-start;
+  }
+
+  &__col-img {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 5);
+  }
+
+  &__img {
+    max-width: 450px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    background-color: $light-bg;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow;
+
+    @media (min-width: $screen-md) {
+      max-width: none;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      border-radius: $border-radius-xl;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 7);
+    @include col-offset(xl, 1);
+    @include col(xl, 6);
+    align-self: center;
+  }
+
+  &__title {
+    margin: 12px 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__intro {
+
+  }
+}

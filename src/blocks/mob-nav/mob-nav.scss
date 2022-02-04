@@ -1,0 +1,87 @@
+.mob-nav {
+  //position: fixed;
+  //top: 64px;
+  //z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  min-height: calc(100vh - 64px);
+  color: $white;
+  background-color: $main-color;
+  border-bottom: 1px solid rgba($white, 0.25);
+
+  @media (min-width: $screen-md) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .row {
+    flex: 1 1 100%;
+  }
+
+  .social-links__link {
+    color: inherit;
+  }
+
+  .social-links__item + .social-links__item {
+    margin-left: 24px;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item {
+
+    & + & {
+      margin-top: 24px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit !important;
+
+    @media (min-width: $screen-md) {
+      font-size: 32px;
+    }
+  }
+
+  &__contacts {
+    margin-top: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 48px;
+    }
+  }
+
+  &__contacts-link {
+    position: relative;
+    padding-left: 36px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left center;
+    background-image: svg-load('../blocks/sprite-svg/svg/sms.svg', fill=$white);
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}

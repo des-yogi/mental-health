@@ -1,7 +1,7 @@
 <!--DEV
 @ @include('blocks/page-header/page-header.html')
 -->
-<header class="container  page-header">
+<header class="container  page-header  @@addClass">
   <div class="page-header__inner">
 
     <a href="/" class="logo" title="Mental Health Academy">
@@ -62,11 +62,10 @@
               </ul>
             </div>
           </div>
-          <button class="page-header__service-link  burger" type="button" title="Переключатель меню"></button>
+          <button id="burger" class="page-header__service-link  burger" type="button" title="Переключатель меню" data-toggle="collapse" data-target="#mobNav" aria-expanded="false" aria-controls="mobNav"></button>
         </div>
 
       </div>
     </div>
   </div>
 </header>
-

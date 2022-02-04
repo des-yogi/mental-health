@@ -1,0 +1,26 @@
+<!--DEV
+@ @include('blocks/blog-card/blog-card.html')
+-->
+<article class="container  blog-card">
+  <div class="row">
+    <div class="blog-card__col-img">
+      <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">
+        <picture>
+          <source srcset="img/@@img-img.webp" media="(min-width: 1200px)" type="image/webp">
+          <source srcset="img/@@img-img.jpg" media="(min-width: 1200px)">
+            <!-- 360x270  от 1200 -->
+          <source srcset="img/@@img-img.webp" type="image/webp">
+          <img src="img/@@img-img.jpg" width="450" height="337" alt="@@title" loading="lazy" decoding="async">
+        </picture>
+      </a>
+    </div>
+    <div class="blog-card__text">
+      <span class="publishedon"><time datetime="2022-01-12">12.01.2022</time></span>
+      <h3 class="h4 blog-card__title"><a href="#">@@title</a></h3>
+      <div class="blog-card__intro">
+        <p>@@text</p>
+      </div>
+    </div>
+  </div>
+</article>
+
