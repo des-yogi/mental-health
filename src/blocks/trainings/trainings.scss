@@ -1,0 +1,35 @@
+.trainings {
+  padding-top: 48px;
+  padding-bottom: calc(72px - 32px);
+
+  @media (min-width: $screen-md) {
+    padding-bottom: calc(72px - 48px);
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: clac(96px - 48px);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col-aside {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4);
+    @include col(xl, 3);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__col-main {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8);
+    @include col(xl, 9);
+  }
+
+  &__main {
+
+  }
+}

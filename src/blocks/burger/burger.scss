@@ -11,6 +11,7 @@
     display: none !important;
   }
 
-  &--close {
+  &[aria-expanded=true] {
+    background-image: svg-load('../blocks/sprite-svg/svg/close.svg', fill=$white);
   }
 }

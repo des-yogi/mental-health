@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Тренинги</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <article class="container  trainings">
+          <h1 class="trainings__title">Тренинги</h1>
+
+          <div class="row">
+
+            <div class="trainings__col-aside">
+              <section class="aside-nav">
+                <h2 class="visually-hidden">Фильтр для сортировки</h2>
+
+                <p class="aside-nav__title">Фільтрувати</p>
+
+                <ul class="list-nostyled  aside-nav__filter-list">
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button" data-filter="all">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#category"></use></svg>
+                      </span>
+                      <span class="aside-nav__filter-text">Усе</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button" data-filter=".leadership">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#crown"></use></svg>
+                      </span>
+                      <span>Лидерство</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button" data-filter=".sales">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#wallet"></use></svg>
+                      </span>
+                      <span>Продажи</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button" data-filter=".managment">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#setting"></use></svg>
+                      </span>
+                      <span>Менеджмент</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button" data-filter=".hr">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#people"></use></svg>
+                      </span>
+                      <span>HR</span>
+                    </button>
+                  </li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="trainings__col-main">
+              <div id="containerFltr" class="trainings__main">
+
+                @@include('blocks/training-card/training-card.html', {
+                  "title": "Школа бизнес-коучинга",
+                  "text": "Практикум-интенсив. 8 часов. <br> Данная тренинг разрабатывается Наталией Романенко индивидуально для каждого заказчика.",
+                  "tagCLass": "leadership managment",
+                  "badge": "<span class='badge'>Лидерство</span><span class='badge'>Менеджмент</span>"
+                })
+
+                @@include('blocks/training-card/training-card.html', {
+                  "title": "ЧЕЛОВЕК-БРЕНД. Как стать №1",
+                  "text": "LIFE или личностный (жизненный) коучинг - это целенаправленное и экологичное взаимодействие Клиента и Коуча, в ходе которого Клиент достигает желаемых результатов в профессиональной и личной сферах своей жизни (Н. Романенко)",
+                  "tagCLass": "hr managment",
+                  "badge": "<span class='badge'>HR</span><span class='badge'>Менеджмент</span>"
+                })
+
+                @@include('blocks/training-card/training-card.html', {
+                  "title": "Курс - LIFE COACHING",
+                  "text": "Авторский тренинг для менеджеров высшего и среднего звена, которые ищут новые методы управления командой",
+                  "tagCLass": "leadership hr managment",
+                  "badge": "<span class='badge'>Лидерство</span><span class='badge'>HR</span><span class='badge'>Менеджмент</span>"
+                })
+
+                @@include('blocks/training-card/training-card.html', {
+                  "title": "Коучинг в управлении",
+                  "text": "Программы коучинга для менеджеров разрабатываются и проводятся организационными коучами, сертифицированными по стандартам ECF",
+                  "tagCLass": "sales managment",
+                  "badge": "<span class='badge'>Продажи</span><span class='badge'>Менеджмент</span>"
+                })
+
+                @@include('blocks/training-card/training-card.html', {
+                  "title": "Индвидуальный план развития сотрудника",
+                  "text": "Программы коучинга для менеджеров разрабатываются и проводятся организационными коучами, сертифицированными по стандартам ECF",
+                  "tagCLass": "hr",
+                  "badge": "<span class='badge'>HR</span>"
+                })
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

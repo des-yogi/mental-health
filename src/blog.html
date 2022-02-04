@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Блог</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <div class="blog-card__wrapper">
+          <h1 class="container  blog-card__pagetitle">Блог</h1>
+
+          @@include('blocks/blog-card/blog-card.html', {
+            "img": 'blog1',
+            "title": '5 апреля - Мастерская коучинга Наталии Романенко. №2-2016 "Как общаться с трудными людьми. Драйверы и адаптации"',
+            "text": '5 апреля 2016г. мы вновь открываем двери своей коучинговой мастерской для практикующих коучей.'
+          })
+
+          @@include('blocks/blog-card/blog-card.html', {
+            "img": 'blog2',
+            "title": '6 апреля пройдет бесплатный вебинар Наталии Романенко "Как преодолевать страхи и барьеры на пути к целям"',
+            "text": 'В ходе вебинара рассмотрим такие вопросы: Страхи, неудачи, внутреннее сопротивление.'
+          })
+
+          @@include('blocks/blog-card/blog-card.html', {
+            "img": 'blog3',
+            "title": '19 марта 2016 наш клуб снова откроет двери для своих участников (74 встреча клуба менеджеров HR-LAND)',
+            "text": 'Время проведения: 11:00-15:0019 марта 2016 года наша очередная встреча в сообществе менеджеров.'
+          })
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

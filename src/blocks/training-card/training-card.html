@@ -1,0 +1,28 @@
+<!--DEV
+@ @include('blocks/training-card/training-card.html')
+-->
+
+<article class="training-card mix @@tagCLass">
+  <a href="#" class="embed-responsive embed-responsive--4-3  training-card__img" aria-hidden="true" tabindex="-1">
+    <picture>
+      <source srcset="img/blog1-img.webp" media="(min-width: 1200px)" type="image/webp">
+      <source srcset="img/blog1-img.jpg" media="(min-width: 1200px)">
+        <!-- 360x270  от 1200 -->
+      <source srcset="img/blog1-img.webp" type="image/webp">
+      <img src="img/blog1-img.jpg" width="460" height="345" alt="Заголовок" loading="lazy" decoding="async">
+    </picture>
+  </a>
+
+  <div class="training-card__text">
+    <span class="training-card__type">Практикум-интенсив - 8 часов</span>
+    <h2 class="h4  training-card__title">
+      <a href="#">@@title</a>
+    </h2>
+    <div class="training-card__descr">
+      <p>@@text</p>
+    </div>
+    <div class="training-card__footer">
+      @@badge
+    </div>
+  </div>
+</article>

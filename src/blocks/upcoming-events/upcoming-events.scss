@@ -2,6 +2,13 @@
   color: $white;
   background-color: $secondary-color;
 
+  @media (min-width: $screen-xxl) {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 175px 774px;
+    background-image: url(../img/events-left.png);
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   .tab-content > .tab-pane {
