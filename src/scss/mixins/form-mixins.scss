@@ -8,7 +8,7 @@
   border-radius: $border-radius;
   padding: $field-padding-vertical  $field-padding-horizontal;
   line-height: $line-height;
-  font-size: 1em;
+  font-size: 16px;
   font-family: inherit;
   background-color: #fff;
   -moz-appearance: textfield; // stylelint-disable-line
@@ -44,10 +44,10 @@
 
 @mixin field-help-text {
   display: block;
-  padding-top: 0.4em;
+  padding-top: 0.25rem;
   font-size: $font-size-sm;
   line-height: 1.2em;
-  color: $text-muted;
+  color: $color-danger;
 
   &:empty { // stylelint-disable-line
     display: none;
@@ -57,7 +57,7 @@
 
 @mixin field-focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  box-shadow: 0 0 0 1px rgba($color-main, $opacity);
 }
 
 

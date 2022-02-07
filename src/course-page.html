@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Название курса</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <article class="course-page">
+          <header class="container  course-page__header">
+
+            <div class="row">
+              <div class="course-page__text-col">
+                <a href="#" class="btn  btn--link">
+                  <span class="btn__icon">
+                    <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                  </span>
+                  <span>Все направления</span>
+                </a>
+                <h1 class="course-page__title">Выгорание</h1>
+                <div class="course-page__intro-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante tempus consectetur libero lobortis purus. Nam urna habitant enim dolor habitant adipiscing. Vel dictum sed imperdiet ante suscipit nisl euismod tristique neque. Scelerisque lectus nunc, ullamcorper rhoncus. Mi quis malesuada felis pellentesque sapien sit.</p>
+                </div>
+              </div>
+
+              <div class="course-page__decor-col">
+                <div class="course-page__decor" aria-hidden="true" role="presentation" style="background-image: url(../img/fire-pulse-64px.svg);">
+                  <span class="course-page__rosette-left"></span>
+                  <span class="course-page__rosette-right"></span>
+                </div>
+              </div>
+            </div>
+
+          </header>
+
+          <div class="course-page__body">
+            @@include('blocks/blog-card/blog-card.html', {
+              "img": 'blog1',
+              "title": '5 апреля - Мастерская коучинга Наталии Романенко. №2-2016 "Как общаться с трудными людьми. Драйверы и адаптации"',
+              "text": '5 апреля 2016г. мы вновь открываем двери своей коучинговой мастерской для практикующих коучей.'
+            })
+
+            @@include('blocks/blog-card/blog-card.html', {
+              "img": 'blog2',
+              "title": '6 апреля пройдет бесплатный вебинар Наталии Романенко "Как преодолевать страхи и барьеры на пути к целям"',
+              "text": 'В ходе вебинара рассмотрим такие вопросы: Страхи, неудачи, внутреннее сопротивление.'
+            })
+
+            @@include('blocks/blog-card/blog-card.html', {
+              "img": 'blog3',
+              "title": '19 марта 2016 наш клуб снова откроет двери для своих участников (74 встреча клуба менеджеров HR-LAND)',
+              "text": 'Время проведения: 11:00-15:0019 марта 2016 года наша очередная встреча в сообществе менеджеров.'
+            })
+          </div>
+
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

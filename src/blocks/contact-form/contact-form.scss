@@ -1,0 +1,21 @@
+.contact-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .field-checkbox {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    margin-bottom: 24px;
+  }
+
+  &__submit {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}

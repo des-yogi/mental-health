@@ -1,0 +1,43 @@
+<!--DEV
+@ @include('blocks/contact-form/contact-form.html')
+-->
+
+<form class="contact-form" action="" method="post">
+  <h2 class="h4  contact-form__title">Связаться с нами</h2>
+
+  <div class="contact-form__body">
+    <label class="field-text">
+      <span class="field-text__name visually-hidden">Имя</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input" type="text" name="name" value="" placeholder="Имя">
+        <span class="field-text__help-text error error_name">Ошибка</span>
+      </span>
+    </label>
+    <label class="field-text">
+      <span class="field-text__name visually-hidden">Email</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input" type="email" name="email" value="" placeholder="Email">
+        <span class="field-text__help-text error error_email"></span>
+      </span>
+    </label>
+    <label class="field-text">
+      <span class="field-text__name visually-hidden">Телефон</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input  phone-mask" type="tel" name="tel" value="">
+        <span class="field-text__help-text error error_tel"></span>
+      </span>
+    </label>
+  </div>
+
+  <div class="contact-form__agreement">
+    <button class="btn  contact-form__submit" type="submit">Отправить</button>
+
+    <div class="field-checkbox">
+      <label class="field-checkbox__name">
+        <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+        <span class="field-checkbox__name-text">Я согласен на обработку персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a></span>
+      </label>
+    </div>
+  </div>
+
+</form>

@@ -362,3 +362,9 @@ a {
 .badge + .badge {
   margin-top: 12px;
 }
+
+.col-1-2-3 {
+  @include col(xs, 12, $grid-columns, 16px);
+  @include col(md, 6);
+  @include col(xl, 4);
+}

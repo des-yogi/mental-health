@@ -1,95 +1,86 @@
-// В этом файле должны быть стили для БЭМ-блока field-checkbox, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$line-height:                 1.375em !default;
-
 .field-checkbox {
 
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: 16px;
 
-  &__title {
-    display: block;
-    font-weight: 700;
-    line-height: $line-height;
-    margin-bottom: 0.4em;
-  }
+  // &__title {
+  //   display: block;
+  //   font-weight: 700;
+  //   line-height: $line-height;
+  //   margin-bottom: 0.4em;
+  // }
 
-  &__input-wrap {
+  // &__input-wrap {
 
-    & + & {
-      margin-top: ($line-height / 2);
-    }
-  }
+  //   & + & {
+  //     margin-top: ($line-height / 2);
+  //   }
+  // }
 
   &__name {
     position: relative;
     display: inline-block;
-    padding-left: 1.5em;
-    margin-right: 0.6em;
+    padding-left: 36px;
+    //margin-right: 0.6em;
+    font-size: $font-size-sm;
     font-weight: 400;
-    line-height: $line-height;
+    line-height: 1.3;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__name-text {
+
+        &::before {
+          background-color: rgba($main-color, 0.16);
+        }
+      }
+
+      input:checked + #{$block-name}__name-text {
+
+        &::after {
+          border-color: $link-color--hover;
+          background-color: $link-color--hover;
+        }
+      }
+    }
   }
 
   &__name-text {
 
-    // свой чекбокс с картинкой
-
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0.1em;
-    //   left: 0;
-    //   width: 14px;
-    //   height: 14px;
-    //   background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-checkbox/img_to_bg/checkbox--checked.svg');
-    // }
-
-    // / свой чекбокс с картинкой
-
-    // свой чекбокс без картинок
-
-    &:before {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
-      top: 0.1em;
+      top: 0;
       left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
-      border-radius: $border-radius;
+      width: 22px;
+      height: 22px;
+      border: 2px solid $main-color;
+      border-radius: $border-radius-xs;
+      cursor: pointer;
     }
 
-    @at-root input:focus ~ &:before {
+    @at-root input:focus ~ &::before {
       @include field-focus;
+      background-color: rgba($main-color, 0.16);
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: calc(0.1em + 1px);
-      left: 3px;
-      width: 14px;
-      height: 6px;
+    &::after {
       opacity: 0;
-      border-left: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(-45deg);
+      background-color: $main-color;
+      background-size: 11px 8px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/field-checkbox/bg-img/check-mark.svg', fill=$white);
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {
         opacity: 1;
       }
     }
-
-    // / свой чекбокс без картинок
   }
 
   &__input {

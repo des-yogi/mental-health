@@ -111,4 +111,19 @@
       margin: 0 auto;
     }
   }
+
+  &--noindex {
+    padding-top: 48px;
+    padding-bottom: 64px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 64px;
+      padding-bottom: 72px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+      padding-bottom: 96px;
+    }
+  }
 }
