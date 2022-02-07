@@ -44,7 +44,15 @@
     "trainings": [],
     "training-card": [],
     "aside-nav": [],
-    "blog-card": []
+    "blog-card": [],
+    "contacts": [],
+    "contact-form": [],
+    "course-card": [],
+    "course-page": [],
+    "team-slider": [],
+    "about-features": [],
+    "awards": [],
+    "about-text": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

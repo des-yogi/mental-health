@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Направления обучения (Courses)</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <div class="container  course-card__wrapper">
+          <h1>Направления обучения</h1>
+
+          <ul class="list-nostyled  row">
+
+            <li class="col-1-2-3">
+              @@include('blocks/course-card/course-card.html', {
+                "icon": "fire-pulse",
+                "title": "Выгорание",
+                "text": "Международное сообщество HR менеджеров, HR директоров"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/course-card/course-card.html', {
+                "icon": "crown",
+                "title": "Коммуникации",
+                "text": "Международное сообщество HR менеджеров, HR директоров"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/course-card/course-card.html', {
+                "icon": "fire-pulse",
+                "title": "Менторинг",
+                "text": "Международное сообщество HR менеджеров, HR директоров"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/course-card/course-card.html', {
+                "icon": "crown",
+                "title": "Психотерапия",
+                "text": "Международное сообщество HR менеджеров, HR директоров"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/course-card/course-card.html', {
+                "icon": "fire-pulse",
+                "title": "Бизнес-психология",
+                "text": "Международное сообщество HR менеджеров, HR директоров"
+              })
+            </li>
+
+            <li class="col-1-2-3">
+              @@include('blocks/course-card/course-card.html', {
+                "icon": "crown",
+                "title": "Медитации",
+                "text": "Международное сообщество HR менеджеров, HR директоров"
+              })
+            </li>
+
+          </ul>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

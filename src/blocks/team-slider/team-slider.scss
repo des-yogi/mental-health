@@ -1,0 +1,128 @@
+.team-slider {
+  padding-top: 72px;
+  padding-bottom: 32px;
+  color: $white;
+  background-color: $secondary-color;
+
+  @media (min-width: $screen-xxl) {
+    position: relative;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 175px;
+      height: 774px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      background-image: url(../img/team-slider-bg.png);
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+      background-image: url(../img/team-slider-bg.png);
+      transform: scale(-1, -1);
+    }
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+    margin-bottom: 48px;
+  }
+
+  &__slider-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
+
+  &__slide-img {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    border-radius: $border-radius-xl;
+    background-color: $gray-darker;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__member {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  &__descr {
+    font-size: $font-size-sm;
+  }
+
+  &__slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: static;
+    width: 48px;
+    height: 48px;
+    border-radius: $border-radius;
+    border: 1px solid $white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    transition: all $transition-time;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $main-color;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__button-prev {
+    background-image: svg-load('../blocks/sprite-svg/svg/arrow-left.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/arrow-left.svg', fill=$main-color);
+      }
+  }
+
+  &__button-next {
+    background-image: svg-load('../blocks/sprite-svg/svg/arrow-right.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        background-image: svg-load('../blocks/sprite-svg/svg/arrow-right.svg', fill=$main-color);
+      }
+  }
+}

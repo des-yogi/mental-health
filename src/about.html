@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Об Академии</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+        <!-- Уровень заголовка установить h1 -->
+        @@include('blocks/about-index/about-index.html', {
+          "addClass": "about-index--noindex",
+          "titleClass": "h1"
+        })
+
+        @@include('blocks/team-slider/team-slider.html')
+
+        @@include('blocks/about-features/about-features.html')
+
+        @@include('blocks/awards/awards.html')
+
+        @@include('blocks/benefits/benefits.html')
+
+        @@include('blocks/about-text/about-text.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

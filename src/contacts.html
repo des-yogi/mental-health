@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакты</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <article class="contacts">
+
+          <div class="container  contacts__inner">
+            <h1 class="contacts__title">Контакты</h1>
+
+            <div class="row">
+
+              <div class="contacts__content-col">
+                <div class="contacts__content">
+
+                  <div class="contacts__content-item">
+                    <span class="contacts__content-cap">Адрес</span>
+                    <span class="contacts__content-body">
+                      <span>м. Київ,</span>
+                      <span>вул. Лютераньска 12/11, офіс 192</span>
+                    </span>
+                  </div>
+
+                  <div class="contacts__content-item">
+                    <span class="contacts__content-cap">Телефон</span>
+                    <span class="contacts__content-body">
+                      <a href="tel:+380632730049">+38 063 273 00 49</a>
+                    </span>
+                  </div>
+
+                  <div class="contacts__content-item">
+                    <span class="contacts__content-cap">Facebook</span>
+                    <span class="contacts__content-body">
+                      <a href="#" target="_blank" rel="nofollow noopener">facebook.com/mental.health.academy</a>
+                    </span>
+                  </div>
+
+                  <div class="contacts__content-item">
+                    <span class="contacts__content-cap">Наталия Романенко</span>
+                    <span class="contacts__content-body">
+                      <a href="#" target="_blank" rel="nofollow noopener">facebook.com/romanenko.kiev.ua</a>
+                    </span>
+                  </div>
+
+                  <div class="contacts__content-item">
+                    <span class="contacts__content-cap">Email</span>
+                    <span class="contacts__content-body">
+                      <a href="mailto:coachcenter.kyiv@gmail.com">coachcenter.kyiv@gmail.com</a>
+                    </span>
+                  </div>
+
+                  <div class="contacts__content-item">
+                    <span class="contacts__content-cap">Соцсети</span>
+                    <div class="contacts__content-body">
+                      @@include('blocks/social-links/social-links.html')
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="contacts__form-col">
+                @@include('blocks/contact-form/contact-form.html')
+              </div>
+
+            </div>
+
+          </div>
+
+          <section class="contacts__map">
+            <iframe title="Расположение офиса на карте" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.7960745670116!2d30.522265051479042!3d50.444898979373875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5435650e07%3A0x3dd358838bab4702!2z0JvRjtGC0LXRgNCw0L3RgdC60LDRjyDRg9C7LiwgMTIsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1644222365249!5m2!1sru!2sua" style="width:100%;border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </section>
+
+        </article>
+
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.course-card {
+  padding: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-xl;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 32px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    padding-top: 48px;
+    padding-bottom: calc(72px - 24px);
+
+    @media (min-width: $screen-md) {
+      padding-bottom: calc(72px - 32px);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: calc(96px - 32px);
+    }
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    overflow: hidden;
+
+    img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title,
+  &__text {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+
+  }
+
+  &__link {
+    width: 100%;
+  }
+}

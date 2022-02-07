@@ -1,0 +1,46 @@
+.about-features {
+  padding-top: 72px;
+  padding-bottom: calc(72px - 48px);
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: calc(96px - 64px);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 9);
+    @include col-offset(lg, 0);
+    @include col(lg, 6);
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      display: inline-block;
+      vertical-align: top;
+      content: "";
+      width: 64px;
+      height: 52px;
+      margin-bottom: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-image: svg-load('../blocks/about-features/bg-img/rosette.svg', fill=$main-color);
+    }
+  }
+
+  &__item-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+}
