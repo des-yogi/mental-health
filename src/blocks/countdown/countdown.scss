@@ -3,7 +3,7 @@
   font-size: inherit;
   font-weight: inherit;
   text-align: center;
-  color: $main-color;
+  color: inherit;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -17,15 +17,22 @@
   }
 
   &__number {
+    font-size: 24px;
+    font-weight: 700;
 
     &::after {
       display: inline-block;
       vertical-align: baseline;
       content: attr(data-divider);
-      margin-right: 4px;
-      margin-left: 2px;
+      margin-right: 6px;
+      //margin-left: 2px;
+      transform: translateX(-2px);
       font-size: inherit;
       font-weight: inherit;
+    }
+
+    &:first-child {
+      color: $main-color;
     }
   }
 
@@ -39,5 +46,9 @@
       display: inline-block;
       vertical-align: baseline;
     }
+  }
+
+  &__caption {
+    //margin-bottom: 16px;
   }
 }

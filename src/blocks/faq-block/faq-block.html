@@ -1,0 +1,58 @@
+<!--DEV
+@ @include('blocks/faq-block/faq-block.html')
+-->
+
+<section class="faq-block" style="margin-top:64px;">
+  <h2 class="h3  faq-block__title">FAQ</h2>
+  <p class="faq-block__lead">Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы</p>
+
+  <div class="accordion" id="faq-block" role="list">
+
+    <div class="faq-block__item" role="listitem">
+      <div class="faq-block__item-title" id="headingOne">
+        <h4 class="faq-block__caption">
+          <button class="faq-block__btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Заголовок 1
+          </button>
+        </h4>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faq-block">
+        <div class="faq-block__item-body">
+          Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the class.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-block__item" role="listitem">
+      <div class="faq-block__item-title" id="headingTwo">
+        <h4 class="faq-block__caption">
+          <button class="faq-block__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Заголовок 2
+          </button>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq-block">
+        <div class="faq-block__item-body">
+          Some placeholder content for the second accordion panel. This panel is hidden by default.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-block__item" role="listitem">
+      <div class="faq-block__item-title" id="headingThree">
+        <h4 class="faq-block__caption">
+          <button class="faq-block__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Заголовок 3
+          </button>
+        </h4>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq-block">
+        <div class="card-body">
+          And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

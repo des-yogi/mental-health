@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кабинет пользователя</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <div class="container  user-cab">
+          <h1 class="user-cab__title">Кабинет пользователя</h1>
+
+          <div class="row">
+
+            <div class="user-cab__nav-col">
+              <section class="aside-nav">
+                <h2 class="visually-hidden">Меню кабинета пользователя</h2>
+
+                <p class="aside-nav__title" aria-hidden="true">Меню</p>
+
+                <ul class="list-nostyled  aside-nav__filter-list">
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#category"></use></svg>
+                      </span>
+                      <span class="aside-nav__filter-text">Личный кабинет</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#crown"></use></svg>
+                      </span>
+                      <span>Тренинги</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn" type="button">
+                      <span class="aside-nav__filter-icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
+                      </span>
+                      <span>Мероприятия</span>
+                    </button>
+                  </li>
+                  <li class="aside-nav__filter-item">
+                    <button class="aside-nav__filter-btn  aside-nav__filter-btn" type="button">
+                      <span class="aside-nav__filter-icon  aside-nav__filter-icon--exit">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#sign-out"></use></svg>
+                      </span>
+                      <span>Выход</span>
+                    </button>
+                  </li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="user-cab__content-col">
+              <section class="profile">
+                <div class="profile__header">
+                  <h2 class="profile__title">Профиль пользователя</h2>
+                  <button class="btn  btn--link btn--link--right  profile__edit" type="button">
+                    <span class="btn__icon">
+                      <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                    </span>
+                    <span>Редактировать</span>
+                  </button>
+                </div>
+              </section>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

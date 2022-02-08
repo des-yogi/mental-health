@@ -77,5 +77,14 @@
     svg {
       fill: $main-color;
     }
+
+    &--exit {
+      color: $color-danger;
+      border-color: rgba($color-danger, 0.25);
+
+      svg {
+        fill: currentColor;
+      }
+    }
   }
 }
