@@ -1,9 +1,23 @@
-// В этом файле должны быть стили для БЭМ-блока about-text, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .about-text {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col {
+    @include col(xs, 6, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 9);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__lead {
+    font-weight: 400;
+  }
 }

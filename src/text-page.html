@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Текстовая страница</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <div class="container  text-page">
+          <div class="row">
+
+            <div class="text-page__aside-col">
+              <aside class="aside-event">
+
+                @@include('blocks/buy-course/buy-course.html', {
+                  "bgColorClass": "",
+                  "title": "Купить курс",
+                  "text": "После покупки вы сможете посмотреть его на этой странице либо в личном кабинете",
+                  "btnClass": "",
+                  "btnText": "Купить курс"
+                })
+
+                @@include('blocks/buy-course/buy-course.html', {
+                  "bgColorClass": "buy-course--main",
+                  "title": "Курс куплен",
+                  "text": "Вы приобрели этот курс и можете ознакмиться с ним по кнопке ниже либо в личном кабинете",
+                  "btnClass": "btn--main",
+                  "btnText": "Смотреть курс"
+                })
+
+                <div class="aside-event__nav">
+                  <ul class="list-nostyled">
+                    <li>
+                      <a href="#h1" class="scroll-link" data-scroll-link>H1</a>
+                    </li>
+                    <li>
+                      <a href="#h2" class="scroll-link" data-scroll-link>H2</a>
+                    </li>
+                    <li>
+                      <a href="#h3" class="scroll-link" data-scroll-link>H3</a>
+                    </li>
+                    <li>
+                      <a href="#faq" class="scroll-link" data-scroll-link>Faq</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </aside>
+            </div>
+
+            <div class="text-page__content-col">
+              <article>
+                <div id="h1" class="text-page__block">
+                  <h1>H1</h1>
+                  <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+                  <h2>H2</h2>
+                  <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Алфавит она взобравшись силуэт пустился встретил несколько предложения что грамматики использовало скатился, то парадигматическая о даль обеспечивает, рыбными вдали мир страну наш безопасную пояс оксмокс! </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deleniti rerum nobis odio eligendi iure optio pariatur, similique minima in facere, aspernatur architecto exercitationem voluptas maxime praesentium ducimus deserunt dolorem tenetur. Dicta magni accusamus repellat. Facilis, natus. </p>
+                  <h3>H3</h3>
+                  <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+                </div>
+                <div id="h2" class="text-page__block">
+                  <h2>H2</h2>
+                  <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Алфавит она взобравшись силуэт пустился встретил несколько предложения что грамматики использовало скатился, то парадигматическая о даль обеспечивает, рыбными вдали мир страну наш безопасную пояс оксмокс! </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deleniti rerum nobis odio eligendi iure optio pariatur, similique minima in facere, aspernatur architecto exercitationem voluptas maxime praesentium ducimus deserunt dolorem tenetur. Dicta magni accusamus repellat. Facilis, natus. </p>
+                </div>
+                <div id="h3" class="text-page__block">
+                  <h3>H3</h3>
+                  <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Алфавит она взобравшись силуэт пустился встретил несколько предложения что грамматики использовало скатился, то парадигматическая о даль обеспечивает, рыбными вдали мир страну наш безопасную пояс оксмокс! </p>
+
+                  <blockquote cite="http://example.com/facts">
+                    <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы.</p>
+                    <footer>
+                      <span>
+                        <img src="img/hero-author.jpg" width="48" height="48" alt="Имя автора">
+                      </span>
+                      <span>Наталия Семитоцкая</span>
+                    </footer>
+                  </blockquote>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deleniti rerum nobis odio eligendi iure optio pariatur, similique minima in facere, aspernatur architecto exercitationem voluptas maxime praesentium ducimus deserunt dolorem tenetur. Dicta magni accusamus repellat. Facilis, natus. </p>
+
+                  <table>
+                    <caption>Table title and/or explanatory text</caption>
+                    <thead>
+                      <tr>
+                        <th>header</th>
+                        <th>header</th>
+                        <th>header</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                      </tr>
+                      <tr>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <ul>
+                    <li>Text-11</li>
+                    <li>Text-21</li>
+                    <li>Text-31</li>
+                    <li>Text-41</li>
+                    <li>Text-51</li>
+                  </ul>
+
+                  <ol>
+                    <li>Text-11</li>
+                    <li>Text-21</li>
+                    <li>Text-31</li>
+                    <li>Text-41</li>
+                    <li>Text-51</li>
+                  </ol>
+                </div>
+
+              </article>
+
+              <div id="faq" class="text-page__block">
+                @@include('blocks/faq-block/faq-block.html')
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

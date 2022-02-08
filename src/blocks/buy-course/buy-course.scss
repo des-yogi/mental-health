@@ -1,0 +1,32 @@
+.buy-course {
+  padding: 32px;
+  margin-bottom: 48px;
+  color: $white;
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: $main-color;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-size: $font-size-sm;
+    color: inherit;
+  }
+
+  &--main {
+    background-color: $main-color;
+
+    #{$block-name}__title {
+      color: inherit;
+    }
+  }
+}

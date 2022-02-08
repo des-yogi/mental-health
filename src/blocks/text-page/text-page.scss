@@ -1,0 +1,38 @@
+.text-page {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__aside-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 9);
+    @include col-offset(xl, 0);
+    @include col(xl, 4);
+  }
+
+  &__content-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 9);
+    @include col-offset(xl, 1);
+    @include col(xl, 6);
+  }
+
+  &__block {
+
+    &:not(:last-child) {
+      margin-bottom: 4em;
+    }
+  }
+}

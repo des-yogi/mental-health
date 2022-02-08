@@ -1,0 +1,33 @@
+.profile {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md) {
+      transform: translateY(-4px);
+    }
+  }
+
+  &__title {
+    flex: 1 1 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-right: 32px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__edit {
+    flex: 0 0 auto;
+  }
+}

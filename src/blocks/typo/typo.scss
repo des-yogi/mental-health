@@ -161,7 +161,7 @@ address {
 
 ul,
 ol {
-  padding-left: 1.3em;
+  padding-left: 1.2em;
 }
 
 ol ol,
@@ -174,6 +174,10 @@ ul ol {
 
 li {
   line-height: inherit;
+
+  &::marker {
+    color: $link-color--hover;
+  }
 }
 
 hr {
@@ -206,9 +210,45 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
+  padding: 1.5em;
   margin-left: 0;
   margin-right: 0;
+  font-weight: 500;
+  background-color: $light-bg;
+  border-radius: $border-radius-xs;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span {
+
+      &:first-child {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 48px;
+          height: 48px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      &:last-child {
+        font-size: $font-size-sm;
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 dt {
@@ -269,13 +309,14 @@ pre {
 ol {
   list-style: none;
   counter-reset: something;
-  padding-left: 32px;
+  padding-left: 5px;
 
   li {
     counter-increment: something;
 
     &::before {
       content: counters(something, ".") ". ";
+      color: $link-color--hover;
     }
   }
 }

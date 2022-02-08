@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>404 страница</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <div class="page-header__wrapper">
+        @@include('blocks/page-header/page-header.html', {
+          "addClass": ""
+        })
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+        @@include('blocks/mob-nav/mob-nav.html')
+      </div>
+
+      <main>
+
+        <div class="container  page-404">
+          <div class="row">
+
+            <div class="page-404__text-col">
+              <div class="page-404__text">
+                <h1 class="page-404__title">
+                  <span>Oops...</span>
+                  <span class="h4">Страница, которую вы запрашивали, не найдена</span>
+                </h1>
+                <a href="index.html" class="btn"><span>На главную</span></a>
+              </div>
+            </div>
+
+            <div class="page-404__img-col">
+              <picture>
+                <source srcset="img/lotus.webp" media="(min-width: 480px)" type="image/webp">
+                <source srcset="img/lotus.jpg" media="(min-width: 480px)">
+                  <!-- 746x587 (от 480)  -->
+                <source srcset="img/lotus.webp" type="image/webp">
+                <img src="img/lotus.jpg" width="450" height="361" alt="Страница 404">
+              </picture>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

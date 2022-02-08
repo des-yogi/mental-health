@@ -1,0 +1,28 @@
+.user-cab {
+  padding-top: 48px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__nav-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 4);
+    @include col(xl, 3);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__content-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 8);
+    @include col-offset(xl, 1);
+    @include col(xl, 7);
+  }
+}

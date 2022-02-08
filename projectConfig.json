@@ -52,7 +52,14 @@
     "team-slider": [],
     "about-features": [],
     "awards": [],
-    "about-text": []
+    "about-text": [],
+    "aside-event": [],
+    "text-page": [],
+    "buy-course": [],
+    "faq-block": [],
+    "page-404": [],
+    "user-cab": [],
+    "profile": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
