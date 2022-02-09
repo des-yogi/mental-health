@@ -63,7 +63,18 @@
     color: initial;
   }
 
-  &__footer {
+  &--vertical {
+    margin-bottom: 0 !important;
 
+    @media (min-width: $screen-xl) {
+      display: block;
+    }
+
+    #{$block-name}__img {
+
+      @media (min-width: $screen-xl) {
+        margin-right: 0;
+      }
+    }
   }
 }

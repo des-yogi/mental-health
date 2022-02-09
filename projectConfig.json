@@ -59,7 +59,8 @@
     "faq-block": [],
     "page-404": [],
     "user-cab": [],
-    "profile": []
+    "profile": [],
+    "user-modal": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -1,0 +1,118 @@
+<!--DEV
+@ @include('blocks/user-modal/user-modal.html')
+-->
+
+<div id="user-modal" class="modal fade  user-modal" tabindex="-1" aria-labelledby="user-modal-lbl" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content  user-modal__content">
+      <div class="modal-header  user-modal__header">
+        <h5 class="modal-title  user-modal__title" id="user-modal-lbl">Кабинет пользователя</h5>
+        <button type="button" class="user-modal__close" data-dismiss="modal" aria-label="Close">
+          <span class="user-modal__close-icon" aria-hidden="true">
+            <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body  user-modal__body">
+
+        <ul class="list-nostyled nav nav-tabs  user-modal__nav" id="userModalTab" role="tablist">
+          <li class="nav-item user-modal__nav-item" role="presentation">
+            <a class="nav-link  user-modal__nav-link active" id="enterTab" data-toggle="tab" href="#enter" role="tab" aria-controls="enter" aria-selected="true">Войти</a>
+          </li>
+          <li class="nav-item user-modal__nav-item" role="presentation">
+            <a class="nav-link  user-modal__nav-link" id="checkinTab" data-toggle="tab" href="#checkin" role="tab" aria-controls="checkin" aria-selected="false">Зарегистрироваться</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="userModalContent">
+          <div class="tab-pane  user-modal__tab-pane fade show active" id="enter" role="tabpanel" aria-labelledby="enterTab">
+            <form id="loginForm" class="user-modal__form" action="" method="post">
+              <label class="field-text">
+                <span class="field-text__name">Email</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="email" name="login" value="">
+                  <span class="field-text__help-text  error error_login"></span>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__name">Пароль</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="password" name="pass" value="">
+                  <button class="field-text__eye" type="button" aria-label="Переключатель видимости пароля"></button>
+                  <span class="field-text__help-text  error pass"></span>
+                </span>
+              </label>
+              <div class="row  user-modal__row">
+                <div class="user-modal__field-col">
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" name="save" value="">
+                      <span class="field-checkbox__name-text">Запомнить меня</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="user-modal__field-col">
+                  <a href="#" class="user-modal__link">Напомнить пароль</a>
+                </div>
+              </div>
+              <button id="enter-submit" type="submit" class="btn"><span>Войти</span></button>
+            </form>
+          </div>
+          <div class="tab-pane  user-modal__tab-pane fade" id="checkin" role="tabpanel" aria-labelledby="checkinTab">
+            <form id="checkinForm" class="user-modal__form" action="" method="post">
+              <label class="field-text">
+                <span class="field-text__name">Имя</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" name="name" value="">
+                  <span class="field-text__help-text  error error_name"></span>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__name">Фамилия</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" name="surname" value="">
+                  <span class="field-text__help-text  error error_surname"></span>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__name">Email</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="email" name="login" value="">
+                  <span class="field-text__help-text  error error_login"></span>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__name">Пароль</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="password" name="pass" value="">
+                  <button class="field-text__eye" type="button" aria-label="Переключатель видимости пароля"></button>
+                  <span class="field-text__help-text  error error_pass"></span>
+                </span>
+              </label>
+              <label class="field-text">
+                <span class="field-text__name">Повторите пароль</span>
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="password" name="pass_confirm" value="">
+                  <button class="field-text__eye" type="button" aria-label="Переключатель видимости пароля"></button>
+                  <span class="field-text__help-text  error error_pass_confirm"></span>
+                </span>
+              </label>
+              <div class="user-modal__agreement">
+                <div class="field-checkbox">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                    <span class="field-checkbox__name-text">Регистрируясь, вы соглашаетесь с <a href="#">Пользовательским соглашением</a></span>
+                  </label>
+                </div>
+                <button id="checkin-submit" class="btn  user-modal__submit" type="submit">
+                  <span>Зарегистрироваться</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

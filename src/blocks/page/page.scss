@@ -330,6 +330,15 @@ a {
   }
 }
 
+// Настройка показа табов
+.tab-content > .tab-pane {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
 // background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
 // background-image: svg-load('../blocks/sprite-svg/svg/menu.svg', fill=$main-color);
 

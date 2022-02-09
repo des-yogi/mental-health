@@ -21,6 +21,7 @@
     font-family: $font-family;
     font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
     background-color: $white;
     border: none;
     border-radius: $border-radius-xs;
@@ -38,6 +39,7 @@
       background-color: $light-bg;
     }
 
+    &.active,
     &--active {
       color: $white;
       background-color: $main-color;
@@ -56,6 +58,14 @@
         & > svg {
           fill: $white;
         }
+      }
+    }
+
+    &--exit {
+
+      &:hover,
+      &:focus {
+        color: $color-danger;
       }
     }
   }

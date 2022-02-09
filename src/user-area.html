@@ -35,55 +35,259 @@
 
                 <p class="aside-nav__title" aria-hidden="true">Меню</p>
 
-                <ul class="list-nostyled  aside-nav__filter-list">
-                  <li class="aside-nav__filter-item">
-                    <button class="aside-nav__filter-btn" type="button">
+                <ul class="list-nostyled  nav nav-tabs  aside-nav__filter-list" id="userTab" role="tablist" aria-orientation="vertical">
+
+                  <li class="nav-item aside-nav__filter-item" role="presentation">
+                    <a class="nav-link  aside-nav__filter-btn  active" id="profileTab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">
                       <span class="aside-nav__filter-icon">
                         <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#category"></use></svg>
                       </span>
-                      <span class="aside-nav__filter-text">Личный кабинет</span>
-                    </button>
+                      <span class="aside-nav__filter-text">Профиль пользователя</span>
+                    </a>
                   </li>
-                  <li class="aside-nav__filter-item">
-                    <button class="aside-nav__filter-btn" type="button">
+
+                  <li class="nav-item  aside-nav__filter-item" role="presentation">
+                    <a class="nav-link  aside-nav__filter-btn" id="trainingsTab" data-toggle="tab" href="#trainings" role="tab" aria-controls="trainings" aria-selected="false">
                       <span class="aside-nav__filter-icon">
                         <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#crown"></use></svg>
                       </span>
                       <span>Тренинги</span>
-                    </button>
+                    </a>
                   </li>
-                  <li class="aside-nav__filter-item">
-                    <button class="aside-nav__filter-btn" type="button">
+
+                  <li class="nav-item  aside-nav__filter-item" role="presentation">
+                    <a class="nav-link  aside-nav__filter-btn" id="eventsTab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="false">
                       <span class="aside-nav__filter-icon">
                         <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#share"></use></svg>
                       </span>
                       <span>Мероприятия</span>
-                    </button>
+                    </a>
                   </li>
-                  <li class="aside-nav__filter-item">
-                    <button class="aside-nav__filter-btn  aside-nav__filter-btn" type="button">
+
+                  <li class="aside-nav__filter-item" role="presentation">
+                    <a href="#" class="aside-nav__filter-btn  aside-nav__filter-btn--exit">
                       <span class="aside-nav__filter-icon  aside-nav__filter-icon--exit">
                         <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#sign-out"></use></svg>
                       </span>
                       <span>Выход</span>
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </section>
             </div>
 
             <div class="user-cab__content-col">
-              <section class="profile">
-                <div class="profile__header">
-                  <h2 class="profile__title">Профиль пользователя</h2>
-                  <button class="btn  btn--link btn--link--right  profile__edit" type="button">
-                    <span class="btn__icon">
-                      <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
-                    </span>
-                    <span>Редактировать</span>
-                  </button>
+              <div class="tab-content  user-cab__content" id="tabContent">
+
+                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profileTab">
+                  <section class="profile">
+                    <div class="profile__header">
+                      <h2 class="profile__title">Профиль пользователя</h2>
+                      <button id="turnEdit" class="btn  btn--link btn--link--right  profile__edit" type="button">
+                        <span class="btn__icon">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-left"></use></svg>
+                        </span>
+                        <span>Редактировать</span>
+                      </button>
+                    </div>
+
+                    <form id="profileForm" class="profile__content" action="" method="post">
+
+                      <fieldset class="profile__fieldset">
+                        <legend class="visually-hidden">Персональные данные пользователя</legend>
+                        <div class="row  profile__personal">
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Имя</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" name="name" value="Имя" disabled>
+                                <span class="field-text__help-text  error error_name"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Фамилия</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" name="surname" value="Фамилия" disabled>
+                                <span class="field-text__help-text  error error_surname"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Телефон</span>
+                              <span class="field-text__input-wrap">
+                                <input class="phone-mask  field-text__input" type="tel" name="tel" value="" disabled>
+                                <span class="field-text__help-text  error error_tel"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Дата рождения</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="date" name="date" value="" disabled>
+                                <span class="field-text__help-text  error error_date"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <div class="field-radio">
+                              <div class="field-radio__title">Пол</div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="sex" value="" disabled>
+                                  <span class="field-radio__name-text">Мужской</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="sex" value="" disabled>
+                                  <span class="field-radio__name-text">Женский</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                      <fieldset class="profile__fieldset">
+                        <legend class="profile__legend">Данные для входа</legend>
+
+                        <div class="row">
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Email</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="email" name="login" value="" disabled>
+                                <span class="field-text__help-text  error error_login"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Старый пароль</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="password" name="outdated_pass" value="" disabled>
+                                <button class="field-text__eye" type="button" aria-label="Переключатель видимости пароля"></button>
+                                <span class="field-text__help-text  error error_outdated_pass"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Новый пароль</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="password" name="new_pass" value="" disabled>
+                                <button class="field-text__eye" type="button" aria-label="Переключатель видимости пароля"></button>
+                                <span class="field-text__help-text  error error_new_pass"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col">
+                            <label class="field-text">
+                              <span class="field-text__name">Повторите новый пароль</span>
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="password" name="new_pass_confirm" value="" disabled>
+                                <button class="field-text__eye" type="button" aria-label="Переключатель видимости пароля"></button>
+                                <span class="field-text__help-text  error error_new_pass_confirm"></span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="profile__col  profile__col--submit">
+                            <button class="btn  submit__input" type="submit" disabled><span>Сохранить</span></button>
+                          </div>
+
+                        </div>
+                      </fieldset>
+
+                    </form>
+                  </section>
+                 </div>
+
+                <div class="tab-pane fade" id="trainings" role="tabpanel" aria-labelledby="trainingsTab">
+                  <section class="profile">
+                    <div class="profile__header">
+                      <h2 class="profile__title">Ваши тренинги</h2>
+                    </div>
+                    <div class="row">
+                      <div class="profile__events-col">
+                        @@include('blocks/training-card/training-card.html', {
+                          "orientationClass": "training-card--vertical",
+                          "title": "Школа бизнес-коучинга",
+                          "text": "Практикум-интенсив. 8 часов. <br> Данная тренинг разрабатывается Наталией Романенко индивидуально для каждого заказчика.",
+                          "tagCLass": "leadership managment",
+                          "badge": "<span class='badge'>Лидерство</span><span class='badge'>Менеджмент</span>"
+                        })
+                      </div>
+
+                      <div class="profile__events-col">
+                        @@include('blocks/training-card/training-card.html', {
+                          "orientationClass": "training-card--vertical",
+                          "title": "ЧЕЛОВЕК-БРЕНД. Как стать №1",
+                          "text": "LIFE или личностный (жизненный) коучинг - это целенаправленное и экологичное взаимодействие Клиента и Коуча, в ходе которого Клиент достигает желаемых результатов в профессиональной и личной сферах своей жизни (Н. Романенко)",
+                          "tagCLass": "hr managment",
+                          "badge": "<span class='badge'>HR</span><span class='badge'>Менеджмент</span>"
+                        })
+                      </div>
+
+                      <div class="profile__events-col">
+                        @@include('blocks/training-card/training-card.html', {
+                          "orientationClass": "training-card--vertical",
+                          "title": "Курс - LIFE COACHING",
+                          "text": "Авторский тренинг для менеджеров высшего и среднего звена, которые ищут новые методы управления командой",
+                          "tagCLass": "leadership hr managment",
+                          "badge": "<span class='badge'>Лидерство</span><span class='badge'>HR</span><span class='badge'>Менеджмент</span>"
+                        })
+                      </div>
+
+                    </div>
+                  </section>
                 </div>
-              </section>
+
+                <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="eventsTab">
+                  <section class="profile">
+                    <div class="profile__header">
+                      <h2 class="profile__title">Ваши мероприятия</h2>
+                    </div>
+                    <div class="row">
+                      <div class="profile__events-col">
+                        @@include('blocks/training-card/training-card.html', {
+                          "orientationClass": "training-card--vertical",
+                          "title": "Школа бизнес-коучинга",
+                          "text": "Практикум-интенсив. 8 часов. <br> Данная тренинг разрабатывается Наталией Романенко индивидуально для каждого заказчика.",
+                          "tagCLass": "leadership managment",
+                          "badge": "<span class='badge'>Лидерство</span><span class='badge'>Менеджмент</span>"
+                        })
+                      </div>
+
+                      <div class="profile__events-col">
+                        @@include('blocks/training-card/training-card.html', {
+                          "orientationClass": "training-card--vertical",
+                          "title": "Курс - LIFE COACHING",
+                          "text": "Авторский тренинг для менеджеров высшего и среднего звена, которые ищут новые методы управления командой",
+                          "tagCLass": "leadership hr managment",
+                          "badge": "<span class='badge'>Лидерство</span><span class='badge'>HR</span><span class='badge'>Менеджмент</span>"
+                        })
+                      </div>
+
+                    </div>
+                  </section>
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -98,6 +302,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/user-modal/user-modal.html')
 
   @@include('_include/page_bottom.html')
 
