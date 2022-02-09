@@ -23,6 +23,6 @@
     @include col(xs, 12, $grid-columns, 16px);
     @include col(md, 8);
     @include col-offset(xl, 1);
-    @include col(xl, 7);
+    @include col(xl, 8);
   }
 }

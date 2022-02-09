@@ -63,7 +63,8 @@
 
 @mixin field-name {
   display: block;
-  margin-bottom: 0.4em;
+  margin-bottom: 8px;
+  font-size: $font-size-sm;
+  font-weight: 400;
   line-height: $line-height;
-  font-weight: 700;
 }

@@ -66,21 +66,6 @@ var bLazy = new Blazy({
 //   // code
 // }());
 
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });
-
-
-
 // $(document).ready(function(){
 //   if(window.matchMedia('(min-width: 1366px)').matches){
 //   // do functionality on screens bigger than 1366px
@@ -91,19 +76,45 @@ var bLazy = new Blazy({
 //   return false;
 // });
 
-/* (function () {
-  const submitBtn = document.querySelector('.partnership__submit');
-  const agreementCheckbox = document.querySelector('#agreement');
+(function(){
+  // переключение видимости поля пароля
+  const eyeBtns = document.querySelectorAll('.field-text__eye');
+  if(!eyeBtns) return;
 
-  const agreementHandler = function (e) {
-    if (!this.checked) {
-      submitBtn.disabled = true;
+  const toggleVisibility = function (target) {
+    if (target.previousElementSibling.getAttribute('type') === 'password') {
+      target.classList.add('show');
+      target.previousElementSibling.setAttribute('type', 'text');
     } else {
-      submitBtn.disabled = false;
+      target.classList.remove('show');
+      target.previousElementSibling.setAttribute('type', 'password');
     }
+    return false;
   };
 
-  if (agreementCheckbox) {
-    agreementCheckbox.addEventListener('change', agreementHandler);
-  }
-})(); */
+  Array.prototype.forEach.call(eyeBtns, function (btn) {
+    btn.addEventListener('click', function (e) {
+      toggleVisibility(e.target);
+    });
+  });
+
+}());
+
+(function(){
+  // вкл режим редактирования формы
+  const editBtn = document.getElementById('turnEdit');
+  if(!editBtn) return;
+
+  const canEdit = function () {
+    const profileForm = document.getElementById('profileForm');
+    const inputsArr = profileForm.querySelectorAll('input[class$="__input"], button[class$="__input"]');
+
+    Array.prototype.forEach.call(inputsArr, function (input) {
+      if (input.disabled) {
+        input.disabled = false;
+      }
+    });
+  };
+
+  editBtn.addEventListener('click', canEdit);
+}());
