@@ -10,7 +10,7 @@
   $block-name:                &; // #{$block-name}__element
 
   &__col {
-    @include col(xs, 6, $grid-columns, 16px);
+    @include col(xs, 12, $grid-columns, 16px);
     @include col-offset(md, 1);
     @include col(md, 9);
     @include col-offset(xl, 2);
