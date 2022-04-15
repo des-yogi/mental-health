@@ -94,7 +94,8 @@
     opacity: 0.8;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &[aria-current=page] {
       color: $white;
       opacity: 1;
     }
