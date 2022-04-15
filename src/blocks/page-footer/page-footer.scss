@@ -101,6 +101,13 @@
     @include col(xs, 6, $grid-columns, 16px);
     @include col(md, 4);
     margin-bottom: 16px;
+
+    &.active {
+
+      #{$block-name}__nav-link {
+        color: $main-color;
+      }
+    }
   }
 
   &__nav-link {
