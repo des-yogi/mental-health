@@ -67,12 +67,24 @@
     @include col(md, 8);
     @include col(xl, 12);
     margin-bottom: 16px;
+
+    & > div:first-child {
+      margin-bottom: 12px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 14px;
+      }
+    }
   }
 
   &__contacts-social {
     @include col(xs, 12, $grid-columns, 16px);
     @include col(md, 4);
     @include col(xl, 12);
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 16px;
+    }
   }
 
   &__contacts-link {
@@ -84,6 +96,10 @@
     background-size: 24px;
     background-position: left center;
     background-image: svg-load('../blocks/sprite-svg/svg/sms.svg', fill=$main-color);
+
+    &--tg {
+      background-image: svg-load('../blocks/sprite-svg/svg/telegram.svg', fill=$main-color);
+    }
   }
 
   &__nav-list {

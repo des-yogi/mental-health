@@ -83,5 +83,9 @@
     &:focus {
       color: $white;
     }
+
+    &--tg {
+      background-image: svg-load('../blocks/sprite-svg/svg/telegram.svg', fill=$white);
+    }
   }
 }
