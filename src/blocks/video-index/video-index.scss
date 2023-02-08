@@ -16,10 +16,7 @@
   &__col {
     @include col(xs, 12, $grid-columns, 16px);
     @include col(md, 6);
-
-    @media (max-width: $screen-md - 1) {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
   }
 
   &__title {

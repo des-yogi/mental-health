@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
     let url = media.src;
     let match = url.match(regexp);
+    console.log(match[1]);
 
     return match[1];
   }
