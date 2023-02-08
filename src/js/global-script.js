@@ -56,26 +56,6 @@ var bLazy = new Blazy({
   selector: '.b-lazy'
 });
 
-// Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
-
-// Изоляция без jQuery
-// (function(){
-//   // code
-// }());
-
-// $(document).ready(function(){
-//   if(window.matchMedia('(min-width: 1366px)').matches){
-//   // do functionality on screens bigger than 1366px
-//     $("#sticker").sticky({
-//       topSpacing: 100
-//     });
-//   }
-//   return false;
-// });
-
 (function(){
   // переключение видимости поля пароля
   const eyeBtns = document.querySelectorAll('.field-text__eye');
